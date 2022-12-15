@@ -78,3 +78,40 @@ switzerlandwest
 ukwest
 uaecentral
 brazilsoutheast
+
+
+
+
+To get all the available azure VM images using Azure CLI, you can use the command az vm image.
+
+The below command will retrieve all the available azure images in the marketplace.
+
+PS C:\> az vm image list --all
+The above command will take some time to retrieve the output. To get the output into the table format, use the below command.
+
+PS C:\> az vm image list --all -otable
+To retrieve the images from the particular location, use the -l or --location parameter.
+
+PS C:\> az vm image list -l eastus -otable
+
+
+
+
+az network public-ip create \
+    --resource-group QuickStartCreateIP-rg \
+    --name myStandardPublicIP \
+    --version IPv4 \
+    --sku Standard \
+    --zone 1 2 3
+
+
+az network public-ip create \
+    --resource-group QuickStartCreateIP-rg \
+    --name myBasicPublicIP \
+    --version IPv4 \
+    --sku Basic \
+    --allocation-method Static
+
+
+
+
